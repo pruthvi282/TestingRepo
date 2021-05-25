@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="BROWSER" value="chrome"/>
+  <test name="Test1(failed)" parallel="tests">
+    <parameter name="BROWSER" value="chrome"/>
+    <groups>
+      <run>
+        <include name="smokeTest"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.Test.TestHomePage">
+        <methods>
+          <include name="Test1"/>
+          <include name="OpenBrowser"/>
+        </methods>
+      </class> <!-- com.Test.TestHomePage -->
+      <class name="com.Test.Scroll">
+        <methods>
+          <include name="OpenBrowser"/>
+          <include name="connectDB"/>
+        </methods>
+      </class> <!-- com.Test.Scroll -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test name="Test2(failed)" parallel="tests">
+    <parameter name="BROWSER" value="chrome"/>
+    <groups>
+      <run>
+        <include name="smokeTest"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.Test.Scroll">
+        <methods>
+          <include name="OpenBrowser"/>
+          <include name="connectDB"/>
+          <include name="MouseHover"/>
+        </methods>
+      </class> <!-- com.Test.Scroll -->
+      <class name="com.Test.TestHomePage">
+        <methods>
+          <include name="OpenBrowser"/>
+        </methods>
+      </class> <!-- com.Test.TestHomePage -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite] -->
