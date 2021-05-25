@@ -41,6 +41,7 @@ public class TestHomePage extends BaseClass{
 		 WebDriverUtlitiy web=new WebDriverUtlitiy();
 		WebElement ele = home.getDropdown();
 		web.DropDown(ele, "Option1");
+		System.out.println("complted");
 		Thread.sleep(2000);
 	}
 	
